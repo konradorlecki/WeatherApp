@@ -1,0 +1,12 @@
+<app-nav-bar></app-nav-bar>
+<div class="logo">
+  <h1>Weather App</h1>
+</div>
+<div class="container home-page">
+  <h2>City</h2>
+  <input type="text" [(ngModel)]="cityName">
+  <button (click)="searchCity()">Add city</button>
+  <ul *ngFor="let city of cities">
+    <li>{{city.main.temp}}</li>
+  </ul>
+</div>
