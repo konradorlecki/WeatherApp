@@ -20,10 +20,12 @@ export class HomePageComponent implements OnInit {
   searchCity() {
     this.http.get(`${Api.link}/weather?q=${this.cityName}&APPID=${Api.key}&units=metric`)
       .subscribe(data => {
-        data.main.temp = Math.round(data.main.temp) + '°C';
-        this.cities.push(data);
-        console.log(data);
-      });
-
+          // @ts-ignore
+          data.main.temp = Math.round(data.main.temp) + '°C';
+          this.cities.push(data);
+          console.log(data);
+        },
+        error => alert(error.error.message)
+      );
   }
 }
