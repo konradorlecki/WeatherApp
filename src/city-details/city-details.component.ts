@@ -22,13 +22,10 @@ export class CityDetailsComponent implements OnInit {
       .set('APPID', Api.key)
       .set('units', 'metric');
 
-    this.http.get(`${Api.link}/weather?${params}`)
+    this.http.get<any>(`${Api.link}/weather`, {params})
       .subscribe(data => {
-          // @ts-ignore
           data.main.temp = Math.round(data.main.temp) + '°C';
-          // @ts-ignore
           data.wind.deg = this.changeWindDirection(data.wind.deg);
-          // @ts-ignore
           data.wind.speed = Math.round(data.wind.speed * 18 / 5);
           this.cityData = data;
           this.isLoaded = true;
