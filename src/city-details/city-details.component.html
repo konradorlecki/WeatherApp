@@ -1,1 +1,32 @@
-<p>city-details works!</p>
+<app-nav-bar></app-nav-bar>
+<div class="container cityDetails">
+  <h2>{{cityName}}</h2>
+  <div *ngIf="isLoaded">
+    <div>
+      <p>Temperature: </p>
+      <p>{{cityData.main.temp}}</p>
+    </div>
+    <div>
+      <p>Weather: </p>
+      <p>{{cityData.weather[0].main}}</p>
+      <img src="http://openweathermap.org/img/wn/{{cityData.weather[0].icon}}.png"/>
+    </div>
+    <div>
+      <p>Cloud cover</p>
+      <p>{{cityData.clouds.all}}%</p>
+    </div>
+    <div>
+      <p>Humidity: </p>
+      <p>{{cityData.main.humidity}}%</p>
+    </div>
+    <div>
+      <p>Wind: </p>
+      <p>{{cityData.wind.speed}}kph</p>
+      <p>{{cityData.wind.deg}}</p>
+    </div>
+    <div>
+      <p>Pressure: </p>
+      <p>{{cityData.main.pressure}} hPa</p>
+    </div>
+  </div>
+</div>

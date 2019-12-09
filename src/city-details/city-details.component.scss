@@ -1,0 +1,39 @@
+.cityDetails {
+  > h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2vh;
+  }
+
+  > div:first-of-type {
+    font-size: 1.8rem;
+    width: 50%;
+
+
+    > div:first-of-type {
+      margin-top: 7vh
+    }
+
+    > div {
+      margin-top: 2vh;
+      display: flex;
+      height: 50px;
+      align-items: center;
+
+      > img {
+        margin-left: 3vw;
+      }
+
+      p {
+      }
+
+      p:first-of-type {
+        margin-right: 3vw;
+      }
+
+      p:nth-of-type(3) {
+        margin-left: 2vw;
+      }
+    }
+  }
+}
