@@ -1,24 +1,61 @@
-.logo{
-  display:flex;
+.logo {
+  display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
-  height:20vh;
-  >h1{
-    font-size:3em;
+  background-image: url("https://www.cray.com/blog/wp-content/uploads/2015/09/Weather-Blog-Image.jpg");
+  height: 30vh;
+  background-size: cover;
+  color: #FB1;
+
+  > h1 {
+    font-size: 3em;
   }
 }
-.home-page{
+
+.home-page {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  margin-top:2vh;
-  >h2{
-    font-size:1.6em;
+  margin-top: 2vh;
+
+  > h2 {
+    font-size: 1.6em;
   }
-  >input{
-    width:30%;
-    margin:2vh;
+
+  > input {
+    width: 30%;
+    margin: 2vh;
+  }
+
+  > div:first-of-type {
+    font-size: 2rem;
+    width: 100%;
+    text-align: left;
+    p {
+
+    }
+  }
+}
+
+.cityList {
+  align-items: center;
+  font-size: 2rem;
+  width: 100%;
+  text-align: left;
+  margin-top: 3vh;
+  background-color: #D8D1B4;
+  height: 10vh;
+  display: flex;
+  border-radius:30px;
+  p:nth-of-type(2) {
+    display:flex;
+    height: 50px;
+    align-items: center;
+    >img{
+      height: 50px;
+      margin-left: 1.5vw;
+
+    }
   }
 }

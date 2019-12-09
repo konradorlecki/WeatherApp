@@ -5,8 +5,17 @@
 <div class="container home-page">
   <h2>City</h2>
   <input type="text" [(ngModel)]="cityName">
-  <button (click)="searchCity()">Add city</button>
-  <ul *ngFor="let city of cities">
-    <li>{{city.main.temp}}</li>
-  </ul>
+  <button (click)="searchCity()" class="btn btn-primary">Add city</button>
+  <div *ngIf="cities.length !== 0" class="row">
+    <p class="col">City</p>
+    <p class="col-4">Weather</p>
+    <p class="col">Temp</p>
+    <p class="col">Humidity</p>
+  </div>
+  <div *ngFor="let city of cities" class="cityList row">
+    <p class="col">{{city.name}}</p>
+    <p class="col-4">{{city.weather[0].description}} <img src="http://openweathermap.org/img/wn/{{city.weather[0].icon}}.png"/></p>
+    <p class="col">{{city.main.temp}}</p>
+    <p class="col">{{city.main.humidity}}%</p>
+  </div>
 </div>
