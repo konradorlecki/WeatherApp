@@ -1,0 +1,29 @@
+.nav-bar {
+  background-color: #FB1;
+  height: 7vh;
+
+  > div {
+    > ul {
+      list-style: none;
+
+      > li {
+        font-size: 1.6em;
+        display: inline-block;
+        float: right;
+        margin: 2vh 1vw 1vw;
+
+        > a {
+          text-decoration: none;
+          color: whitesmoke;
+        }
+      }
+
+      > li:first-of-type {
+        float: left;
+      }
+    }
+
+
+  }
+}
+

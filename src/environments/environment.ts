@@ -5,7 +5,10 @@
 export const environment = {
   production: false
 };
-
+export const Api = {
+  link: '//api.openweathermap.org/data/2.5',
+  key: '9255e12d14f3883315c070a9d1899c07'
+};
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
