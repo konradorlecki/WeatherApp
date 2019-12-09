@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://www.cray.com/blog/wp-content/uploads/2015/09/Weather-Blog-Image.jpg");
+  background-image: url("../assets/Weather-Blog-Image.jpg");
   height: 30vh;
   background-size: cover;
   color: #FB1;
@@ -40,25 +40,32 @@
 }
 
 .cityList {
-  align-items: center;
-  font-size: 2rem;
+
   width: 100%;
-  text-align: left;
-  margin-top: 3vh;
-  background-color: #D8D1B4;
-  height: 10vh;
-  display: flex;
-  border-radius: 30px;
 
-  p:nth-of-type(2) {
-    display: flex;
-    height: 50px;
+  > a {
+    border-radius: 30px;
     align-items: center;
+    font-size: 2rem;
+    width: 100%;
+    text-align: left;
+    margin-top: 3vh;
+    background-color: #D8D1B4;
+    height: 10vh;
+    display: flex;
+    text-decoration: none;
+    color:#212529;
 
-    > img {
+    p:nth-of-type(2) {
+      display: flex;
       height: 50px;
-      margin-left: 1.5vw;
+      align-items: center;
 
+      > img {
+        height: 50px;
+        margin-left: 1.5vw;
+
+      }
     }
   }
 }

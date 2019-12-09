@@ -13,10 +13,13 @@
     <p class="col">Humidity</p>
   </div>
   <div *ngFor="let city of cities" class="cityList row">
-    <p class="col">{{city.name}}</p>
-    <p class="col-4">{{city.weather[0].description}} <img
-      src="http://openweathermap.org/img/wn/{{city.weather[0].icon}}.png"/></p>
-    <p class="col">{{city.main.temp}}</p>
-    <p class="col">{{city.main.humidity}}%</p>
+    <a [routerLink]="['/recipes', city.name]">
+      <p class="col">{{city.name}}</p>
+      <p class="col-4">{{city.weather[0].description}} <img
+        src="http://openweathermap.org/img/wn/{{city.weather[0].icon}}.png"/></p>
+      <p class="col">{{city.main.temp}}</p>
+      <p class="col">{{city.main.humidity}}%</p>
+    </a>
   </div>
+
 </div>

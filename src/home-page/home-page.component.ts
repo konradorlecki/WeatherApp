@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {Api} from '../environments/environment';
 
 @Component({
   selector: 'app-home-page',
@@ -17,10 +18,9 @@ export class HomePageComponent implements OnInit {
   }
 
   searchCity() {
-    this.http.get(`//api.openweathermap.org/data/2.5/weather?q=${this.cityName}&APPID=9255e12d14f3883315c070a9d1899c07`)
+    this.http.get(`${Api.link}/weather?q=${this.cityName}&APPID=${Api.key}&units=metric`)
       .subscribe(data => {
-        // @ts-ignore
-        data.main.temp = Math.round(data.main.temp - 273) + '°C';
+        data.main.temp = Math.round(data.main.temp) + '°C';
         this.cities.push(data);
         console.log(data);
       });
