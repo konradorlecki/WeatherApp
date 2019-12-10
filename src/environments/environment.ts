@@ -9,6 +9,9 @@ export const Api = {
   link: '//api.openweathermap.org/data/2.5',
   key: '9255e12d14f3883315c070a9d1899c07'
 };
+export const GoogleMapsApi = {
+  key: 'AIzaSyCDi6Pxzc7StvKLqNPn9GbENm5E2v1QINI',
+};
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

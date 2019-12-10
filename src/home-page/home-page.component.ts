@@ -24,9 +24,8 @@ export class HomePageComponent implements OnInit {
       .set('APPID', Api.key)
       .set('units', 'metric');
 
-    this.http.get(`${Api.link}/weather?${params}`)
+    this.http.get<any>(`${Api.link}/weather`, {params})
       .subscribe(data => {
-          // @ts-ignore
           data.main.temp = Math.round(data.main.temp) + '°C';
           this.cities.push(data);
         },

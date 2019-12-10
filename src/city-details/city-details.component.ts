@@ -12,23 +12,22 @@ export class CityDetailsComponent implements OnInit {
   cityName: string;
   cityData: object;
   isLoaded = false;
+  data;
 
   constructor(
     private route: ActivatedRoute,
-    private http: HttpClient) {
+    private http: HttpClient
+  ) {
     this.cityName = route.snapshot.params.cityName;
     const params = new HttpParams()
       .set('q', this.cityName)
       .set('APPID', Api.key)
       .set('units', 'metric');
 
-    this.http.get(`${Api.link}/weather?${params}`)
+    this.http.get<any>(`${Api.link}/weather`, {params})
       .subscribe(data => {
-          // @ts-ignore
           data.main.temp = Math.round(data.main.temp) + '°C';
-          // @ts-ignore
           data.wind.deg = this.changeWindDirection(data.wind.deg);
-          // @ts-ignore
           data.wind.speed = Math.round(data.wind.speed * 18 / 5);
           this.cityData = data;
           this.isLoaded = true;
