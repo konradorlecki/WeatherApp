@@ -12,7 +12,7 @@
     <p class="col">Temp</p>
     <p class="col">Humidity</p>
   </div>
-  <div *ngIf="isLoaded">
+  <div>
     <div *ngFor="let city of cities" class="cityList row">
       <a [routerLink]="['/home', city.name]">
         <p class="col">{{city.name}}</p>

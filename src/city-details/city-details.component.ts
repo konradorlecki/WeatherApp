@@ -25,11 +25,6 @@ export class CityDetailsComponent implements OnInit {
       .set('APPID', Api.key)
       .set('units', 'metric');
 
-    // this.http.get('//tile.openweathermap.org/map/precipitation_new/1/51.59/27.47?appid=9255e12d14f3883315c070a9d1899c07')
-    //   .subscribe(data => {
-    //     console.log(data);
-    //   });
-
     this.http.get<any>(`${Api.link}/weather`, {params})
       .subscribe(data => {
           data.main.temp = Math.round(data.main.temp) + '°C';

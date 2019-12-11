@@ -10,12 +10,13 @@ import {FirebaseService} from '../services/firebase.service';
 })
 export class HomePageComponent implements OnInit {
   public cityName: string;
-  public cities: [] = [];
-  public isLoggedIn;
-  public email;
+  public cities = [];
+  public isLoggedIn: boolean;
+  public email: string;
   public isLoaded = false;
 
   constructor(private http: HttpClient, public firebaseService: FirebaseService) {
+    // @ts-ignore
     this.isLoggedIn = sessionStorage.getItem('isLoggedIn');
   }
 
@@ -30,9 +31,7 @@ export class HomePageComponent implements OnInit {
         }
       });
     }
-    ;
     this.isLoaded = true;
-
   }
 
   addCitiesToDatabase() {
