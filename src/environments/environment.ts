@@ -12,6 +12,16 @@ export const Api = {
 export const GoogleMapsApi = {
   key: 'AIzaSyCDi6Pxzc7StvKLqNPn9GbENm5E2v1QINI',
 };
+export const firebaseConfig = {
+  apiKey: 'AIzaSyAXjtZWmm1A42PhRKi4gA1iu9vyb0f5guc',
+  authDomain: 'weather-app-1bc2d.firebaseapp.com',
+  databaseURL: 'https://weather-app-1bc2d.firebaseio.com',
+  projectId: 'weather-app-1bc2d',
+  storageBucket: 'weather-app-1bc2d.appspot.com',
+  messagingSenderId: '255092272003',
+  appId: '1:255092272003:web:2f9df89b6e35998a1364b6'
+};
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

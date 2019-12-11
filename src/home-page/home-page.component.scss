@@ -19,6 +19,10 @@
   align-items: center;
   margin-top: 2vh;
 
+  >div:last-of-type{
+    width:100%;
+  }
+
   > h2 {
     font-size: 1.6em;
   }
@@ -41,9 +45,6 @@
 }
 
 .cityList {
-
-  width: 100%;
-
   > a {
     border-radius: 30px;
     align-items: center;

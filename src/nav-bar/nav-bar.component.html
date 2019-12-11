@@ -1,9 +1,10 @@
 <div class="nav-bar">
   <div class="container">
     <ul>
-      <li><a href="">Home</a></li>
-      <li><a href="">Login</a></li>
-      <li><a href="">Register</a></li>
+      <li><a [routerLink]="'/'">Home</a></li>
+      <li><a *ngIf="!isLoggedIn" [routerLink]="'/login'">Login</a></li>
+      <li><a *ngIf="!isLoggedIn" [routerLink]="'/register'">Register</a></li>
+      <li><a *ngIf="isLoggedIn" (click)="signOut()" href="/">Sign Out</a></li>
     </ul>
   </div>
 </div>

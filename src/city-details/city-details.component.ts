@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {Api} from '../environments/environment';
 import {HttpClient, HttpParams} from '@angular/common/http';
 
+
 @Component({
   selector: 'app-city-details',
   templateUrl: './city-details.component.html',
@@ -10,9 +11,9 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 })
 export class CityDetailsComponent implements OnInit {
   cityName: string;
-  cityData: object;
+  public cityData: object;
   isLoaded = false;
-  data;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -23,6 +24,11 @@ export class CityDetailsComponent implements OnInit {
       .set('q', this.cityName)
       .set('APPID', Api.key)
       .set('units', 'metric');
+
+    // this.http.get('//tile.openweathermap.org/map/precipitation_new/1/51.59/27.47?appid=9255e12d14f3883315c070a9d1899c07')
+    //   .subscribe(data => {
+    //     console.log(data);
+    //   });
 
     this.http.get<any>(`${Api.link}/weather`, {params})
       .subscribe(data => {
