@@ -38,6 +38,10 @@
     text-align: left;
     margin-top: 2vh;
 
+    > div {
+      width: 91%;
+    }
+
     p {
 
     }
@@ -49,7 +53,7 @@
     border-radius: 30px;
     align-items: center;
     font-size: 2rem;
-    width: 100%;
+    width: 90%;
     text-align: left;
     margin-top: 3vh;
     background-color: #D8D1B4;
@@ -69,5 +73,14 @@
 
       }
     }
+  }
+
+  > button {
+    width: 6%;
+    display: inline-block;
+    height: 6vh;
+    margin-top: 5vh;
+    margin-left: 2%;
+    border-radius: 12px;
   }
 }
