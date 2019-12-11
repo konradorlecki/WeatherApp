@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {Api} from '../environments/environment';
 import {HttpClient, HttpParams} from '@angular/common/http';
 
+
 @Component({
   selector: 'app-city-details',
   templateUrl: './city-details.component.html',
@@ -10,9 +11,9 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 })
 export class CityDetailsComponent implements OnInit {
   cityName: string;
-  cityData: object;
+  public cityData: object;
   isLoaded = false;
-  data;
+
 
   constructor(
     private route: ActivatedRoute,
