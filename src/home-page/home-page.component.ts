@@ -69,5 +69,11 @@ export class HomePageComponent implements OnInit {
       );
 
   }
+
+  deleteCity(index) {
+    this.cities.splice(index, 1);
+    this.addCitiesToDatabase();
+  }
+
 }
 
