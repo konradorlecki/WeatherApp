@@ -12,10 +12,12 @@ export class CityDetailsComponent implements OnInit {
   cityName: string;
   cityData: object;
   isLoaded = false;
+  data;
 
   constructor(
     private route: ActivatedRoute,
-    private http: HttpClient) {
+    private http: HttpClient
+  ) {
     this.cityName = route.snapshot.params.cityName;
     const params = new HttpParams()
       .set('q', this.cityName)

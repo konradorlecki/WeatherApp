@@ -29,4 +29,6 @@
       <p>{{cityData.main.pressure}} hPa</p>
     </div>
   </div>
+  <agm-map *ngIf="isLoaded" [latitude]="cityData.coord.lat" [longitude]="cityData.coord.lon" [zoom]="10">
+  </agm-map>
 </div>
