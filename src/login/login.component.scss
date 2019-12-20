@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+.login {
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10vh;
+    font-size: 2.2rem;
+    margin-bottom: 4vh;
+  }
+
+  > form {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    > button {
+      font-size: 1.2rem;
+      font-weight: 700;
+      width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #19B477;
+      border-color: #19B477;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    > a {
+      display: block;
+      text-align: center;
+      margin-top: 3%;
+      color: blue;
+    }
+  }
+}

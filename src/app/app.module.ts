@@ -15,9 +15,11 @@ import {RegisterComponent} from '../register/register.component';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestore, AngularFirestoreModule} from '@angular/fire/firestore';
+import {InputComponent} from '../input/input.component';
 
 @NgModule({
   declarations: [
+    InputComponent,
     AppComponent,
     HomePageComponent,
     NavBarComponent,
