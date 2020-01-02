@@ -1,0 +1,10 @@
+input {
+  margin-top: 4%;
+  color: #3B3B3B;
+  border: 1px solid rgba(0, 0, 0, .22);
+  font-size:0.9rem;
+}
+
+input:focus {
+  box-shadow: 0 0 0 0.1rem black;
+}

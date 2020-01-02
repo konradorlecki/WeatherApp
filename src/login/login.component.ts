@@ -1,16 +1,17 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {FirebaseService} from '../services/firebase.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['../register/register.component.scss']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
 
   public email: string;
   public password: string;
+  public data;
 
   constructor(public firebaseService: FirebaseService,
               private router: Router) {
@@ -28,4 +29,15 @@ export class LoginComponent implements OnInit {
       })
       .catch(err => console.log(err));
   }
+
+
+  passEmail(data) {
+    this.email = data;
+  }
+
+  passPassword(data) {
+    this.password = data;
+  }
+
+
 }
