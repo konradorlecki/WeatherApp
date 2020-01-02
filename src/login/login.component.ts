@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log('email', this.email, 'password', this.password);
     this.firebaseService.login(this.email, this.password)
       .then(work => {
         this.router.navigate(['/home']);
@@ -34,12 +33,10 @@ export class LoginComponent implements OnInit {
 
   passEmail(data) {
     this.email = data;
-    console.log(data);
   }
 
   passPassword(data) {
     this.password = data;
-    console.log(data);
   }
 
 

@@ -6,19 +6,19 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./input.component.scss']
 })
 export class InputComponent implements OnInit {
-  public data1: string = name;
-  @Input() placeholder: string;
-  @Input() name: string;
-  @Input() type: string;
-  @Output() titleChanged = new EventEmitter<string>();
+  public inputName: string = name;
+  @Input() public placeholder: string;
+  @Input() public name: string;
+  @Input() public type: string;
+  @Output() private titleChanged = new EventEmitter<string>();
 
   constructor() {
-  }
+  }s
 
   ngOnInit() {
   }
 
   sendDataToParent() {
-    this.titleChanged.emit(this.data1);
+    this.titleChanged.emit(this.inputName);
   }
 }
